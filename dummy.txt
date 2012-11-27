@@ -1,0 +1,8 @@
+make srcen
+git diff en/* > ./en_patch.txt
+cd ja/
+patch -p2 -N < ../en_patch.txt || :
+cd ..
+ls -1 ja/*.rej | ./TicketPublisher.pl
+rm -f en_patch.txt ja/*.rej ja/*.orig
+rm -f tmp*
