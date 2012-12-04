@@ -1,3 +1,4 @@
+
 make srcen
 git diff en/* > ./en_patch.txt
 cd ja/
